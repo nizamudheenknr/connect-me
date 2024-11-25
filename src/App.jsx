@@ -1,16 +1,24 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import AdminLogin from './pages/AdminLogin';
-import AdminDashboard from './pages/AdminDashboard'; // Import your Admin Dashboard component
+
+import AdminDashboard from './pages/admin/AdminDashboard'; 
 import Home from './pages/Home';
+import Auth from './pages/AdminLogin';
+import AdminUser from './pages/admin/AdminUser';
+import UserRgstr from './pages/user/UserRgstr';
+import UserProfile from './pages/user/UserProfile';
+import UserPostupd from './pages/user/UserPostupd';
 
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/login" element={<AdminLogin />} />
-      <Route path="/admin-dashboard" element={<AdminDashboard />} /> {/* Add route for admin dashboard */}
-      {/* Add other routes here */}
+      <Route path="/login" element={<Auth />} />
+      <Route path="/admin-dashboard" element={<AdminDashboard />} /> 
+      <Route path="/admin-user" element={<AdminUser />} /> 
+      <Route path="/user-reg" element={<UserRgstr />} /> 
+      <Route path="/profile" element={<UserProfile />} /> 
+      <Route path="/user-postup" element={<UserPostupd/>} /> 
     </Routes>
   );
 }

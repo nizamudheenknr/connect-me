@@ -1,12 +1,11 @@
 import React from 'react';
-
+import Sidebar from '../../components/AdminSidebar';
 const AdminDashboard = () => {
   return (
     <div>
-      <h1>Admin Dashboard</h1>
-      <p>Welcome to the Admin Dashboard!</p>
-    </div>
-  );
+      <Sidebar/>
+</div>
+)
 };
 
 export default AdminDashboard;
